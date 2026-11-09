@@ -100,3 +100,44 @@
   // Exponer función global por si se quiere llamar manual
   window.triggerGlitchTransition = triggerGlitch;
 })();
+
+// ─────────── BLACKWALL — efecto del conky de mi Linux ───────────
+(function() {
+  const GLIFOS = ['#', '%', '@', '/', '0', '1', '!', '?', '=', '+'];
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // capas: scanlines, barrido vertical, ráfagas y marco con esquinas
+    document.body.insertAdjacentHTML('afterbegin', `
+      <div class="bw-scan"></div>
+      <div class="bw-sweep"></div>
+      <div class="bw-burst"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="bw-frame"><i></i><i></i><i></i><i></i></div>`);
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    // títulos con texto original guardado
+    const titulos = [...document.querySelectorAll('h1, h2')]
+      .filter(t => !t.children.length && t.textContent.trim());
+    titulos.forEach(t => { t.dataset.bwTexto = t.textContent; });
+
+    // ráfaga cada ~4 s, dura ~300 ms (igual que frame%40<3 del lua)
+    setInterval(() => {
+      document.body.classList.add('bw-glitch');
+      titulos.forEach(t => {
+        let corrupto = '';
+        for (const ch of t.dataset.bwTexto) {
+          corrupto += (ch !== ' ' && Math.random() < 0.18) ? GLIFOS[Math.floor(Math.random() * GLIFOS.length)] : ch;
+        }
+        t.textContent = corrupto;
+        t.classList.add('bw-corrupto');
+      });
+      setTimeout(() => {
+        document.body.classList.remove('bw-glitch');
+        titulos.forEach(t => {
+          t.textContent = t.dataset.bwTexto;
+          t.classList.remove('bw-corrupto');
+        });
+      }, 300);
+    }, 4000);
+  });
+})();

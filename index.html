@@ -15,7 +15,7 @@
         .bg {
             position:fixed;inset:0;
             background:
-                radial-gradient(ellipse 900px 600px at 50% 35%, #ff073a 0%, #ff0033 18%, #990011 42%, #1a0005 72%, #050005 100%),
+                radial-gradient(ellipse 900px 600px at 50% 35%, #d4001a 0%, #7a0010 30%, #2a0410 55%, #0a0204 78%, #000 100%),
                 linear-gradient(180deg, #1a0005 0%, #000 100%);
             filter: contrast(1.25) saturate(1.3);
         }
@@ -36,7 +36,7 @@
             width:900px;height:700px;
             left:50%;top:18%;
             transform:translateX(-50%);
-            background: radial-gradient(ellipse at center, rgba(255,7,58,0.55) 0%, rgba(255,0,60,0.25) 35%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(212,0,26,0.45) 0%, rgba(122,0,16,0.22) 40%, transparent 70%);
             filter: blur(28px);
             pointer-events:none;
             animation: flarePulse 2.2s ease-in-out infinite;
@@ -63,7 +63,7 @@
             background: repeating-linear-gradient(
                 90deg,
                 transparent 0px,
-                rgba(255,7,58,0.03) 1px,
+                rgba(212,0,26,0.045) 1px,
                 transparent 3px
             );
         }
@@ -84,11 +84,11 @@
         .bars span{
             position:absolute;left:0;width:100%;height:2px;opacity:0.7;animation: barGlitch 0.35s steps(2) infinite;
         }
-        .bars span:nth-child(1){top:18%;background:#ffd700;box-shadow:0 0 8px #ffd700;animation-delay:0s;height:3px}
-        .bars span:nth-child(2){top:42%;background:#00ff88;box-shadow:0 0 8px #00ff88;animation-delay:0.07s}
-        .bars span:nth-child(3){top:67%;background:#00ffff;box-shadow:0 0 8px #00ffff;animation-delay:0.13s;height:2px}
-        .bars span:nth-child(4){top:81%;background:#ffd700;opacity:0.4;height:1px;animation-delay:0.2s}
-        .bars span:nth-child(5){top:28%;background:#00ff88;opacity:0.35;height:1px;animation-delay:0.11s}
+        .bars span:nth-child(1){top:18%;background:#d4001a;box-shadow:0 0 8px #d4001a;animation-delay:0s;height:3px}
+        .bars span:nth-child(2){top:42%;background:#ff2a3c;box-shadow:0 0 8px #ff2a3c;animation-delay:0.07s}
+        .bars span:nth-child(3){top:67%;background:#8a8a8f;box-shadow:0 0 8px #8a8a8f;animation-delay:0.13s;height:2px}
+        .bars span:nth-child(4){top:81%;background:#7a0010;opacity:0.5;height:1px;animation-delay:0.2s}
+        .bars span:nth-child(5){top:28%;background:#ff2a3c;opacity:0.4;height:1px;animation-delay:0.11s}
         @keyframes barGlitch{
             0%{transform:translateX(0) scaleX(1);clip-path:inset(0 0 0 0)}
             20%{transform:translateX(-12px) scaleX(1.08);clip-path:inset(0 0 0 0)}
@@ -107,7 +107,7 @@
         .label-top{
             font-size:0.75rem;letter-spacing:0.45em;color:rgba(255,255,255,0.85);
             text-transform:uppercase;margin-bottom:1.2rem;
-            text-shadow:0 0 8px rgba(255,7,58,0.9);
+            text-shadow:0 0 8px rgba(212,0,26,0.9);
             animation: flickerTop 0.22s steps(2) infinite;
         }
         @keyframes flickerTop{0%{opacity:0.9}50%{opacity:1}100%{opacity:0.85}}
@@ -132,18 +132,18 @@
         }
         /* Amarillo */
         .glitch::before{
-            color:#ffd700;
+            color:#ff2a3c;
             left:-2px;
-            text-shadow:-2px 0 #ffd700, 0 0 10px #ffd700;
+            text-shadow:-2px 0 #ff2a3c, 0 0 10px #ff2a3c;
             clip-path: polygon(0 0, 100% 0, 100% 38%, 0 38%);
             animation: glitchA 0.32s steps(2) infinite;
             opacity:0.95;
         }
         /* Azul/Cyan + Verde mezcla */
         .glitch::after{
-            color:#00ffff;
+            color:#8a8a8f;
             left:2px;
-            text-shadow: 2px 0 #00ff88, -1px 0 #00ffff, 0 0 10px #00ffff;
+            text-shadow: 2px 0 #d4001a, -1px 0 #8a8a8f, 0 0 10px #d4001a;
             clip-path: polygon(0 62%, 100% 62%, 100% 100%, 0 100%);
             animation: glitchB 0.36s steps(2) infinite;
             opacity:0.95;
@@ -152,14 +152,14 @@
         .glitch span{
             position:relative;
             color:#fff;
-            text-shadow: 0 0 12px rgba(0,255,136,0.7);
+            text-shadow: 0 0 12px rgba(212,0,26,0.7);
         }
         .glitch span::after{
             content:attr(data-text);
             position:absolute;inset:0;
-            color:#00ff88;
+            color:#d4001a;
             clip-path: polygon(0 38%, 100% 38%, 100% 62%, 0 62%);
-            text-shadow: 1px 0 #00ff88, 0 0 8px #00ff88;
+            text-shadow: 1px 0 #d4001a, 0 0 8px #d4001a;
             animation: glitchMid 0.28s steps(2) infinite;
             opacity:0.9;
         }
@@ -194,7 +194,7 @@
             letter-spacing:0.35em;
             color:rgba(255,255,255,0.92);
             text-transform:uppercase;
-            text-shadow:0 0 10px rgba(255,255,255,0.6), 0 0 18px rgba(255,7,58,0.7);
+            text-shadow:0 0 10px rgba(255,255,255,0.6), 0 0 18px rgba(212,0,26,0.7);
             animation: subFlicker 0.16s steps(2) infinite;
         }
         @keyframes subFlicker{0%{opacity:0.95}100%{opacity:1}}
@@ -213,8 +213,8 @@
         }
         .progress-bar{
             height:100%;width:0%;
-            background: linear-gradient(90deg, #ffd700 0%, #00ff88 50%, #00ffff 100%);
-            box-shadow:0 0 12px rgba(255,215,0,0.7), 0 0 18px rgba(0,255,136,0.6);
+            background: linear-gradient(90deg, #7a0010 0%, #d4001a 50%, #ff2a3c 100%);
+            box-shadow:0 0 12px rgba(212,0,26,0.7), 0 0 18px rgba(255,42,60,0.5);
             animation: load 3.6s cubic-bezier(0.22,1,0.36,1) forwards;
         }
         @keyframes load{
@@ -228,8 +228,8 @@
         .percent{
             margin-top:0.7rem;
             font-size:0.78rem;letter-spacing:0.28em;
-            color:#ffd700;
-            text-shadow:0 0 8px #ffd700, 0 0 14px rgba(0,255,136,0.5);
+            color:#ff2a3c;
+            text-shadow:0 0 8px #ff2a3c, 0 0 14px rgba(212,0,26,0.5);
             font-weight:700;
         }
         .hint{
@@ -239,16 +239,30 @@
             text-transform:uppercase;
         }
         .hint a{
-            color:#00ff88;text-decoration:none;border-bottom:1px dashed rgba(0,255,136,0.6);padding-bottom:1px;
-            text-shadow:0 0 8px rgba(0,255,136,0.6);
+            color:#d4001a;text-decoration:none;border-bottom:1px dashed rgba(212,0,26,0.6);padding-bottom:1px;
+            text-shadow:0 0 8px rgba(212,0,26,0.6);
         }
-        .hint a:hover{color:#ffd700;border-color:#ffd700;text-shadow:0 0 8px #ffd700}
+        .hint a:hover{color:#ff2a3c;border-color:#ff2a3c;text-shadow:0 0 8px #ff2a3c}
+
+        /* barrido vertical + esquinas, igual que el conky blackwall */
+        .sweep{
+            position:fixed;left:0;right:0;top:0;height:26px;pointer-events:none;z-index:6;
+            background:linear-gradient(180deg, transparent, rgba(212,0,26,0.18) 50%, transparent);
+            animation: sweepMove 5.5s linear infinite;
+        }
+        @keyframes sweepMove{from{transform:translateY(-10vh)}to{transform:translateY(105vh)}}
+        .corners{position:fixed;inset:10px;pointer-events:none;z-index:6}
+        .corners i{position:absolute;width:22px;height:22px;border:3px solid #d4001a}
+        .corners i:nth-child(1){top:-3px;left:-3px;border-right:none;border-bottom:none}
+        .corners i:nth-child(2){top:-3px;right:-3px;border-left:none;border-bottom:none}
+        .corners i:nth-child(3){bottom:-3px;left:-3px;border-right:none;border-top:none}
+        .corners i:nth-child(4){bottom:-3px;right:-3px;border-left:none;border-top:none}
 
         /* Borde TV */
         .tv-border{
             position:fixed;inset:0;
-            border: 1px solid rgba(255,7,58,0.18);
-            box-shadow: inset 0 0 40px rgba(0,0,0,0.85), inset 0 0 120px rgba(255,7,58,0.12);
+            border: 1px solid rgba(212,0,26,0.55);
+            box-shadow: inset 0 0 40px rgba(0,0,0,0.85), inset 0 0 120px rgba(212,0,26,0.10);
             pointer-events:none;
         }
         /* Parpadeo de encendido */
@@ -268,7 +282,7 @@
             .progress-wrap{width:82vw}
         }
         @media (prefers-reduced-motion: reduce){
-            .glitch,.glitch::before,.glitch::after,.glitch span::after,.bars span,.scanlines,.noise,.flare{animation:none}
+            .glitch,.glitch::before,.glitch::after,.glitch span::after,.bars span,.scanlines,.noise,.flare,.sweep{animation:none}
             .progress-bar{animation: load 3.6s linear forwards}
         }
     </style>
@@ -278,13 +292,15 @@
     <div class="flare"></div>
     <div class="scanlines"></div>
     <div class="noise"></div>
+    <div class="sweep"></div>
+    <div class="corners"><i></i><i></i><i></i><i></i></div>
     <div class="bars"><span></span><span></span><span></span><span></span><span></span></div>
     <div class="vignette"></div>
     <div class="tv-border"></div>
     <div class="power-on"></div>
 
     <div class="center">
-        <div class="label-top">● REC • NIXCOBT SYSTEM • 1080i</div>
+        <div class="label-top">● BLACKWALL // ACCESO RESTRINGIDO</div>
         <h1 class="glitch" data-text="CARGANDO"><span data-text="CARGANDO">CARGANDO</span></h1>
         <div class="sub">Iniciando transmisión_</div>
 
