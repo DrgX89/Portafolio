@@ -66,7 +66,7 @@
                 <span class="badge rounded-pill bg-dark border text-secondary">Mecánica</span>
                 <span class="badge rounded-pill bg-dark border text-secondary">QA</span>
                 <span class="badge rounded-pill bg-dark border text-secondary">Bots</span>
-                <span class="badge rounded-pill bg-dark border text-secondary">3D</span>
+                <span class="badge rounded-pill bg-dark border text-secondary">Linux</span>
                 <span class="badge rounded-pill bg-dark border text-secondary">Web</span>
             </div>
         </div>
@@ -125,28 +125,121 @@
                     </div>
                 </div>
 
-                <!-- IMPRESION 3D -->
+                <!-- DRAKESTAR LAUNCHER -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card bg-dark border-secondary h-100 project-card" style="border-color: rgba(255,136,255,0.28);">
+                    <div class="card bg-dark border-secondary h-100 project-card">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-2 gap-2">
-                                <span style="font-size:1.4rem;">🖨️</span>
-                                <span class="badge" style="background:#ff88ff; color:#1a001a;">3D PRINT</span>
-                                <span class="badge bg-light text-dark">MAKER</span>
+                                <span style="font-size:1.4rem;">🚀</span>
+                                <span class="badge" style="background:#8B3DFF; color:white;">LAUNCHER</span>
+                                <span class="badge bg-dark border">EXPERIMENTAL</span>
                             </div>
-                            <h5 class="card-title" style="color:#ff88ff;">Impresión 3D Lab — Piezas funcionales</h5>
-                            <p class="card-text">Diseño en Fusion 360/TinkerCAD, laminado Cura, Ender 3. Soportes, carcasas, adaptadores, repuestos y prototipos en PLA/PETG/TPU. No llaveros, soluciones.</p>
+                            <h5 class="card-title" style="color:#8B3DFF;">DrakeStar Launcher</h5>
+                            <p class="card-text">Launcher híbrido <strong style="color:#8B3DFF;">Java × Rust</strong> del ecosistema Drakes/Slimefun: un solo producto para jugar, probar y administrar el cliente Rust, el cliente Java, el servidor local y el online. Identidad visual propia, canal nightly.</p>
                             <div class="mt-3 d-flex flex-wrap gap-1">
-                                <span class="badge" style="background:#ff88ff; color:#1a001a;">Fusion 360</span>
-                                <span class="badge bg-light text-dark">Cura</span>
-                                <span class="badge bg-secondary">Ender 3</span>
-                                <span class="badge bg-dark border">PLA/PETG</span>
+                                <span class="badge me-1" style="background:#007396; color:white;">Java</span>
+                                <span class="badge me-1" style="background:#dea584; color:#000;">Rust</span>
+                                <span class="badge bg-dark border">Nightly</span>
                             </div>
-                            <small class="d-block mt-2" style="color: var(--accent-yellow); opacity:0.75; font-size:0.75rem;">Prototipado rápido • Piezas a medida</small>
                         </div>
                         <div class="card-footer bg-transparent border-secondary d-flex gap-2">
-                            <a href="./contact.html" class="btn btn-sm flex-grow-1" style="background:#ff88ff; color:#1a001a; font-weight:700;">Encargar pieza</a>
-                            <a href="#" class="btn btn-outline-warning btn-sm">Galería</a>
+                            <a href="https://github.com/DrgX89/DrakeStar-Launcher" target="_blank" class="btn btn-sm flex-grow-1" style="background:#8B3DFF; color:white; font-weight:700;">Ver repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOT DASHBOARD -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark border-secondary h-100 project-card" style="border-color: rgba(0,240,255,0.28);">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2 gap-2">
+                                <span style="font-size:1.4rem;">🖥️</span>
+                                <span class="badge" style="background:#00f0ff; color:#001a1a;">DESKTOP</span>
+                                <span class="badge bg-secondary">KUBUNTU</span>
+                            </div>
+                            <h5 class="card-title" style="color:#00f0ff;">Bot Dashboard</h5>
+                            <p class="card-text">Ventana de escritorio que muestra el estado de los bots de Docker: una tarjeta por contenedor con uptime, healthcheck, latencia y métricas, más los controles del dashboard web de cada bot. Empaquetado y distribuido como <strong style="color:#00f0ff;">.deb</strong>.</p>
+                            <div class="mt-3 d-flex flex-wrap gap-1">
+                                <span class="badge me-1" style="background:#3776ab; color:white;">Python</span>
+                                <span class="badge me-1" style="background:#41cd52; color:#000;">PySide6</span>
+                                <span class="badge me-1" style="background:#2497ed; color:white;">Docker</span>
+                                <span class="badge bg-dark border">.deb</span>
+                            </div>
+                            <small class="d-block mt-2" style="color: var(--accent-yellow); opacity:0.75; font-size:0.75rem;">Lee la config y los secretos del entorno, sin guardar tokens</small>
+                        </div>
+                        <div class="card-footer bg-transparent border-secondary d-flex gap-2">
+                            <a href="./contact.html" class="btn btn-sm flex-grow-1" style="background:#00f0ff; color:#001a1a; font-weight:700;">Pedir demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HUD BLACKWALL -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark border-secondary h-100 project-card" style="border-color: rgba(212,0,26,0.35);">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2 gap-2">
+                                <span style="font-size:1.4rem;">📟</span>
+                                <span class="badge" style="background:#d4001a; color:white;">HUD</span>
+                                <span class="badge bg-dark border">CONKY / LUA</span>
+                            </div>
+                            <h5 class="card-title" style="color:#d4001a;">HUD Blackwall — mi Hud de Kubuntu</h5>
+                            <p class="card-text">HUD de escritorio con estética netwatch: scanlines rojas, barrido vertical, ráfagas glitch, marco con esquinas y título que se corrompe. Reloj, red, CPU y térmicas en tiempo real — el mismo efecto que corre ahora en este portafolio.</p>
+                            <div class="mt-3 d-flex flex-wrap gap-1">
+                                <span class="badge me-1" style="background:#3776ab; color:white;">Python</span>
+                                <span class="badge me-1" style="background:#000080; color:white;">Lua</span>
+                                <span class="badge bg-dark border">Conky</span>
+                                <span class="badge bg-dark border">KDE Plasma</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-secondary d-flex gap-2">
+                            <a href="https://github.com/DrgX89/Hud-Linux" target="_blank" class="btn btn-sm flex-grow-1" style="background:#d4001a; color:white; font-weight:700;">Ver repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BITPUNK THEME -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark border-secondary h-100 project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2 gap-2">
+                                <span style="font-size:1.4rem;">🎨</span>
+                                <span class="badge" style="background:#0ABDC6; color:#001a1a;">TEMA</span>
+                                <span class="badge bg-dark border">KDE PLASMA 6</span>
+                            </div>
+                            <h5 class="card-title" style="color:#0ABDC6;">Bitpunk — tema completo de escritorio</h5>
+                            <p class="card-text">Tema KDE Plasma 6 de punta a punta: boot splash, login (SDDM), escritorio, Konsole, GTK y rofi con una sola paleta cian/magenta sobre negro OLED. Sensores de hardware auto-detectados e instalador y desinstalador armados.</p>
+                            <div class="mt-3 d-flex flex-wrap gap-1">
+                                <span class="badge me-1" style="background:#0ABDC6; color:#001a1a;">Plasma 6</span>
+                                <span class="badge me-1" style="background:#1d99f3; color:white;">KDE</span>
+                                <span class="badge bg-dark border">SDDM</span>
+                                <span class="badge bg-dark border">Bash</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-secondary d-flex gap-2">
+                            <a href="./contact.html" class="btn btn-sm flex-grow-1" style="background:#0ABDC6; color:#001a1a; font-weight:700;">Ver capturas</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AUTOFISHER -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark border-secondary h-100 project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2 gap-2">
+                                <span style="font-size:1.4rem;">🎣</span>
+                                <span class="badge bg-secondary">AUTOMATIZACIÓN</span>
+                                <span class="badge bg-dark border">SCRIPTING</span>
+                            </div>
+                            <h5 class="card-title">Autofisher</h5>
+                            <p class="card-text">Automatización del minijuego de pesca: lee la pantalla, decide cuándo tirar y recoger el anzuelo cuando el pez pica, y deja registro de cada captura con trazas y capturas para depurar. Config por JSON y registro completo de corridas.</p>
+                            <div class="mt-3 d-flex flex-wrap gap-1">
+                                <span class="badge me-1" style="background:#3776ab; color:white;">Python</span>
+                                <span class="badge me-1" style="background:#f7df1e; color:#000;">JSON</span>
+                                <span class="badge bg-dark border">Logs / trazas</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-secondary">
+                            <a href="./contact.html" class="btn btn-outline-secondary btn-sm w-100">Consultar</a>
                         </div>
                     </div>
                 </div>
